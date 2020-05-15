@@ -18,14 +18,14 @@ GetGitIssues_lite.py
 
 ## パラメータ
 必須
-- login user
-- repository
-- outputfilename
+- 第一引数    login user
+- 第二引数    repository
+- 第三引数    outputfilename
 
 非必須  
 private なリポジトリの場合に必要になる。
-- login user password
-- token
+- 第四引数    login user password
+- 第五引数    token
 
 
 ## token の取得方法
