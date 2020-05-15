@@ -111,31 +111,5 @@ def main():
     # excel
     df.to_excel(outputfile, index=False)
 
-    book = openpyxl.load_workbook(outputfile)
-    sheet = book['Sheet1']
-
-    counter = 1
-    while counter <= sheet.max_row:
-        # 行の高さ変更
-        sheet.row_dimensions[counter].height = 30
-        if counter != 1 :
-            # 上付、左揃え
-            sheet['A' + str(counter)].alignment = openpyxl.styles.Alignment(horizontal = 'left', vertical = 'top')
-            sheet['B' + str(counter)].alignment = openpyxl.styles.Alignment(horizontal = 'left', vertical = 'top')
-
-            # セル内折り返し
-            sheet['C' + str(counter)].alignment = openpyxl.styles.Alignment(horizontal = 'left', vertical = 'top', wrapText=True)
-            sheet['D' + str(counter)].alignment = openpyxl.styles.Alignment(horizontal = 'left', vertical = 'top', wrapText=True)
-            sheet['E' + str(counter)].alignment = openpyxl.styles.Alignment(horizontal = 'left', vertical = 'top', wrapText=True)
-
-        counter+=1
-    
-    # 列の幅を変更
-    sheet.column_dimensions['C'].width = 30
-    sheet.column_dimensions['D'].width = 50
-    sheet.column_dimensions['E'].width = 50
-
-    book.save(outputfile)
-
 if __name__ == '__main__':
     main()

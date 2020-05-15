@@ -16,6 +16,9 @@ GetGitIssues.py
 GetGitIssues_lite.py  
 実行中プログレスバーなし。引数なし。コード上に必要なパラメータを記載する。  
 
+GetGitIssues_easy.py  
+実行中プログレスバーなし。引数なし。エクセル整形なし。コード上に必要なパラメータを記載する。  
+
 ## パラメータ
 必須
 - 第一引数    login user
